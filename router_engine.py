@@ -32,8 +32,8 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 # up to 1000 pages per day for free with LlamaParse
 parser = LlamaParse(result_type="markdown", verbose=True)
 documents = SimpleDirectoryReader(
-    "./data",
-    #"./sample_data",
+    #"./data",
+    "./data/small_sample",
     file_extractor={".pdf": parser}
 ).load_data(show_progress=True)
 
